@@ -4,24 +4,22 @@ include_once 'functions.php';
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="peter munene">
+    <meta name="author" content="Peter munene">
     <title>News</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.0-canary.14/tailwind.min.css" integrity="sha512-zXhmHxwXn8kUvZApt3iuxFG7cAHa2wongnyRnq2uAxppI5t/J5pz7I0mrm409qZaAu4KLhRtFTaNhO86OWQv5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-100">
-
     <header class="p-2 bg-blue-100 text-gray-800">
         <div class="container flex justify-between h-16 mx-auto">
             <a href="#" class="flex items-center p-2">
                 <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
+                    </svg> 
                 </div>
             </a>
             <ul class="items-stretch hidden space-x-3 md:flex">
@@ -52,19 +50,16 @@ include_once 'functions.php';
 
     <section class="bg-white mt-5">
         <div class="flex">
-            <!-- <div class="flex flex-col justify-start mr-6  ml-2 md:p-4 shadow-lg rounded-lg ">
+            <div class="flex flex-col justify-start mr-6  ml-2 md:p-4 shadow-lg rounded-lg ">
                 <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Top stories</p>
                 <div class="grid gap-8 md:gap-6 sm:p-3 md:grid-cols-2 lg:px-4 xl:px-6">
-
                     <?php foreach ($dataforHeadlines->articles as $news) : ?>
                         <div class="p-2">
                             <div class="flex flex-row items-center">
                                 <a href="#" class="flex items-center p-2">
-
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                                     </svg>
-
                                 </a>
                                 <a href="<?= $news->url ?>" class="ml-2 font-semibold text-gray-800 hover:underline"><?= $news->title ?> </a>
                             </div>
@@ -75,22 +70,67 @@ include_once 'functions.php';
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div> -->
-
+            </div>
             <div class=" mr-4  mt-4 ">
                 <div class="max-w-md p-8 shadow-lg rounded-lg  bg-yellow-100  text-gray-800">
-                    <h1 class="text-xl font-semibold text-center">Ongata Rongai</h1>
+                    <h1 class="text-xl font-semibold text-center">Nairobi</h1>
                     <div class="flex justify-between space-x-8">
                         <div class="flex flex-col items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 p-2 text-yellow-400 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="w-24 h-24 p-2 text-yellow-400 fill-current"    viewbox="0 0 64 64">
+                                <defs>
+                                    <filter id="blur" width="200%" height="200%">
+                                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                                        <feOffset dx="0" dy="4" result="offsetblur" />
+                                        <feComponentTransfer>
+                                            <feFuncA type="linear" slope="0.05" />
+                                        </feComponentTransfer>
+                                        <feMerge>
+                                            <feMergeNode />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <g filter="url(#blur)" id="cloudy-day-1">
+                                    <g transform="translate(20,10)">
+                                        <g transform="translate(0,16)">
+                                            <g class="am-weather-sun">
+                                                <g>
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(45)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(90)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(135)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(180)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(225)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(270)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                                <g transform="rotate(315)">
+                                                    <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3" />
+                                                </g>
+                                            </g>
+                                            <circle cx="0" cy="0" fill="orange" r="5" stroke="orange" stroke-width="2" />
+                                        </g>
+                                        <g class="am-weather-cloud-2">
+                                            <path d="M47.7,35.4c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3    c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#C6DEFF" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)" />
+                                        </g>
+                                    </g>
+                                </g>
                             </svg>
-
-                            <h1 class="text-lg font-semibold">Sunny</h1>
+                            <h1 class="text-lg font-semibold"><?= $Weatherdata->description ?></h1>
                         </div>
-                        <span class="font-bold text-8xl">14°</span>
+                        <span class="font-bold text-4xl"><?= trim($Weatherdata->temperature, ' °C' );?></span>
                     </div>
-
                 </div>
                 <div class="mt-2 shadow-lg p-4 rounded-lg ">
                     <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Money|Markets</p>
@@ -106,16 +146,13 @@ include_once 'functions.php';
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- <section class="bg-white text-gray-800">
+    <section class="bg-white text-gray-800">
         <div class=" max-w-6xl mx-auto p-6 space-y-6 sm:space-y-12">
-
             <div class="grid justify-center grid-cols-1 gap-2 sm:grid-cols-1 lg:grid-cols-2">
-            
-                <?php foreach ($featuredata->articles as $news) : ?>
+               <?php foreach ($featuredata->articles as $news) : ?>
                     <div class="relative h-80 w-full flex items-center justify-center  bg-cover bg-center  rounded-lg" style="background-image:url(<?= $news->urlToImage; ?>);">
 
                         <div class="absolute h-full w-1/2 top-0 right-0 ">
@@ -126,7 +163,6 @@ include_once 'functions.php';
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                                         </svg>
-
                                     </a>
                                     <?php foreach ($news->source as $source) : ?>
                                         <?php $source = $source; ?>            
@@ -213,7 +249,7 @@ include_once 'functions.php';
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 </body>
 
