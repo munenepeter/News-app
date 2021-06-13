@@ -10,7 +10,7 @@ I have used just the bootstrap CSS library.
 
 I have implemented an NewsAPI from Newsapi
 
-[newsapi.org/]https://newsapi.org/).
+[newsapi.org](https://newsapi.org/).
 
  
 
