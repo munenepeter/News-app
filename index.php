@@ -13,7 +13,7 @@ include_once 'functions.php';
 </head>
 
 <body class="bg-gray-100">
-    <header class="p-2 bg-blue-100 text-gray-800">
+    <header class="p-2 bg-indigo-200 text-gray-800">
         <div class="container flex justify-between h-16 mx-auto">
             <a href="#" class="flex items-center p-2">
                 <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600">
@@ -50,7 +50,7 @@ include_once 'functions.php';
 
     <section class="bg-white mt-5">
         <div class="flex">
-            <div class="flex flex-col justify-start mr-6  ml-2 md:p-4 shadow-lg rounded-lg ">
+            <div class="flex flex-col justify-start mr-6  ml-2 md:p-4 shadow-lg rounded-lg bg-gradient-to-r from-gray-100 to-red-200">
                 <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Top stories</p>
                 <div class="grid gap-8 md:gap-6 sm:p-3 md:grid-cols-2 lg:px-4 xl:px-6">
                     <?php foreach ($dataforHeadlines->articles as $news) : ?>
@@ -61,12 +61,12 @@ include_once 'functions.php';
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                                     </svg>
                                 </a>
-                                <a href="<?= $news->url ?>" class="ml-2 font-semibold text-gray-800 hover:underline"><?= $news->title ?> </a>
+                                <a href="<?= $news->url ?>" class="ml-2 font-semibold text-red-800 hover:underline"><?= $news->title ?> </a>
                             </div>
                             <?php foreach ($news->source as $source) : ?>
                                 <?php $source = $source; ?>
                             <?php endforeach; ?>
-                            <p class="mt-1 ml-10 text-gray-600"><?php print_r($source); ?> . <?= time_elapsed_string($news->publishedAt) ?> </p>
+                            <p class="mt-1 ml-10 text-red-600"><?php print_r($source); ?> . <?= time_elapsed_string($news->publishedAt) ?> </p>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -149,7 +149,7 @@ include_once 'functions.php';
         </div>
     </section>
 
-    <section class="bg-white text-gray-800">
+    <section class="bg-gray-200 text-gray-800">
         <div class=" max-w-6xl mx-auto p-6 space-y-6 sm:space-y-12">
             <div class="grid justify-center grid-cols-1 gap-2 sm:grid-cols-1 lg:grid-cols-2">
                <?php foreach ($featuredata->articles as $news) : ?>
